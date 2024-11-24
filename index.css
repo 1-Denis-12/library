@@ -15,7 +15,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 300px;
-    height: 200px;
+    height: 400px;
     border-radius: 20px;
     background-color: #56b6c4;
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
@@ -42,7 +42,7 @@ body{
     cursor: pointer;
 }
 
-.remove_btn {
+.book_btn {
     padding: 10px;
     border-radius: 20px;
     background-color: #9567e0;

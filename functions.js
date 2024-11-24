@@ -25,9 +25,9 @@ Book.prototype.bookRead = function() {
 }
 
 // temp books to fill array
-const book1 = new Book("How to", "James May","2024", "No")
-const book2 = new Book("hello", "my man","2022", "Yes")
-MyLibrary.push(book1, book2)
+// const book1 = new Book("How to", "James May","2024", "No")
+// const book2 = new Book("hello", "my man","2022", "Yes")
+// MyLibrary.push(book1, book2)
 
 // adds books to MyLibrary
 function addBookToLibrary(title, author, year, read) {

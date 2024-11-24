@@ -1,0 +1,51 @@
+body{
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    background-color: #9567e0;
+}
+
+#books {
+    display: flex;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    background-color: #56b6c4;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+/* .add_book {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 99vw;   
+} */
+
+.add_book_btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0px 20px 20px 0px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: #56b6c4;
+    border: none;
+    cursor: pointer;
+}
+
+.remove_btn {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #9567e0;
+    border: none;
+    cursor: pointer;
+}

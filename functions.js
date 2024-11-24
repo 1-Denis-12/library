@@ -1,7 +1,10 @@
 const books = document.querySelector("#books")
 
+// list that holds all books
 const MyLibrary = [];
 
+
+// book object
 function Book(title, author, year, read) {
     this.title = title;
     this.author = author;
@@ -9,12 +12,25 @@ function Book(title, author, year, read) {
     this.read = read
 }
 
+// book prototype function for book read = yes / no button
+Book.prototype.bookRead = function() {
+    var status = this.read
+    if (status.toUpperCase() == "YES") {
+        this.read = "No"
+    }
+    else {
+        this.read = "Yes"
+    }
+    displayBooks()
+}
+
+// temp books to fill array
 const book1 = new Book("How to", "James May","2024", "No")
 const book2 = new Book("hello", "my man","2022", "Yes")
 MyLibrary.push(book1, book2)
 
-
-function addBookToLibrary(title, author, year) {
+// adds books to MyLibrary
+function addBookToLibrary(title, author, year, read) {
     const newBook = new Book(title, author, year, read);
     MyLibrary.push(newBook);
     displayBooks()
@@ -30,7 +46,7 @@ function displayBooks() {
                             <p>Author: ${MyLibrary[i].author}</p>
                             <p>Year: ${MyLibrary[i].year}</p>
                             <p>Read: ${MyLibrary[i].read}</p>
-                            <button class="book_btn" onclick="bookRead(${i})">Read</button>
+                            <button class="book_btn" onclick="MyLibrary[${i}].bookRead()">Read</button>
                             <button class="book_btn" onclick="removeBook(${i})">remove</button>
                             </div>`
     }
@@ -38,17 +54,6 @@ function displayBooks() {
 
 function removeBook(num) {
     MyLibrary.splice(num, 1)
-    displayBooks()
-}
-
-function bookRead(num) {
-    var status = MyLibrary[num].read;
-    if (status.toUpperCase() == "YES") {
-        MyLibrary[num].read = "No"
-    }
-    else {
-        MyLibrary[num].read = "Yes"
-    }
     displayBooks()
 }
 
